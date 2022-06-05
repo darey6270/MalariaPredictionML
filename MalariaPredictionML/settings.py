@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-#)bx1zlkzkho0_5jw27rmemga2_fm+zrzeh45km7qs9jf)96xu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['darey6270-malariaprediction.herokuapp.com']
+ALLOWED_HOSTS = ['darey6270-malariapredict.herokuapp.com']
 
 
 # Application definition
