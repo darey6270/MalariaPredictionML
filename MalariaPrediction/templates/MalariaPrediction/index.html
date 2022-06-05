@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+<!--====================================
+=            Hero Section            =
+=====================================-->
+{%block header_block %}
+<section id="hero-image">
+	<div class="shapes-container">
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="zoom-out" data-aos-duration="2000" data-aos-delay="500"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="200"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-up" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-down" data-aos-duration="500" data-aos-delay="0"></div>
+		<div class="shape" data-aos="fade-up-right" data-aos-duration="500" data-aos-delay="100"></div>
+		<div class="shape" data-aos="fade-down-left" data-aos-duration="500" data-aos-delay="0"></div>
+	</div>
+	<div class="container">
+		<div class="row align-items-center ">
+
+			<div class="col-md-6 order-2 order-md-1 text-center text-md-left">
+						<br />
+			<br />
+			<br /> <br /><br /><br /><br />
+				<h1 class="font-weight-bold mb-4">Malaria Diagnostic System</h1>
+				<p class="text-white mb-5">On malaria diagnostic is a software designed
+					to assist doctors and medical professional in diagnosis
+					and prescription of different ailment as a result of malaria</p>
+
+
+			</div>
+			<div class="col-md-6 text-center order-1 order-md-2">
+			</div>
+		</div>
+	</div>
+</section>
+{%endblock%}
+<!--====  End of Hero Section  ====-->
+
+{%block content1 %}
+
+<section class="section page-title">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 m-auto">
+				<!-- Page Title -->
+				<h1>Malaria Diagnostic</h1>
+				<!-- Page Description -->
+				<p>On malaria diagnostic is a software designed
+					to assist doctors and medical professional in diagnosis
+					and prescription of different ailment as a result of malaria</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--====  End of Page Title  ====-->
+
+
+<!--==================================
+=            Feature Team            =
+===================================-->
+<section class="founders section pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<!-- Featured Member -->
+<div class="founder">
+	<!-- Member Image -->
+	<!-- Name -->
+	<h2>Malaria</h2>
+	<p>According to World Health Organization (WHO, 2019),
+		malaria is a potential medical emergency and should be
+		treated because delays in diagnosis and treatment are
+		leading causes of death in many countries. As noted
+		earlier, the disease is caused by a peripheral blood
+		parasite of the genus Plasmodium. Nowadays, the gold
+		standard method for malaria detection is examined by
+		expert laboratorists. It requires well-trained laboratory personnel,
+		it is time consuming, and is an unautomated protocol.
+	In routine laboratory tests, a complete blood count (CBC)
+		is almost always requested without exception as part
+		of the routine investigation in febrile patients.
+		In previously published research, there were some
+		reports using routine automated hematology analyzers
+		for presumptive diagnosis of malaria infection.
+		Most studies are those regarding abnormal depolarizing
+		patterns of the Cell-Dyn hematology analyzer
+		(Abbott Diagnostics, Santa Clara, CA) (Hanscheid et al, 2001)</p>
+
+</div>
+			</div>
+			<div class="col-lg-6">
+				<!-- Featured Member -->
+<div class="founder">
+	<!-- Member Image --><!-- Name -->
+	<img src="{% static 'images/group_doctor1.jpg' %}" class="img-fluid">
+	<!-- Social Sites -->
+	</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Feature Team  ====-->
+
+
+{%endblock%}

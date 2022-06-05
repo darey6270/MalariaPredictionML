@@ -1,0 +1,117 @@
+{%extends 'base.html' %}
+{%load static %}
+
+{%block content1 %}
+<script>
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(400)
+                        .height(400);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+
+
+<section class="section page-title"  style="background-image:url({% static 'images/doctor-patient-catoon.jpg' %})">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 m-auto">
+				<!-- Page Title -->
+				<h2>Malaria Diagnostic System </h2>
+				<!-- Page Description -->
+				<h3>Malaria Predictor</h3>
+			</div>
+		</div>
+	</div>
+</section>
+        <!-- Page Header End -->
+        
+
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Malaria Diagnostic Result</p>
+                    <h2>The image report cell is below</h2>
+                </div>
+                <div class="row align-items-center text-center contact-information">
+                    <div class="col-md-6 col-lg-4 text-center">
+                        {% if output == 1 %}
+                <div class="card card-body alert alert-danger text-center">This cell is an Infected Malarial Cell.</div>
+            {% else %}
+                <div class="card card-body alert alert-success text-center">This cell is not Infected.</div>
+            {% endif %}
+                    </div>
+                  <a href="{% url 'service' %}" class="btn btn-primary" >Back to Prediction Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+<section class="founders section pt-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<!-- Featured Member -->
+<div class="founder">
+	<!-- Member Image -->
+	<!-- Name -->
+	<h2> Malaria Prevention</h2>
+    <p>1. <b>Awareness of the risk of malaria </b> <br />
+    Before travelling, it is very important to find out if there is a risk of malaria
+    in the place or places you are going. For example, back-packing
+    or travelling to rural areas is generally more risky than staying
+    in urban hotels. In some countries the risk varies between seasons
+    - malaria is more common in the wet season. In other countries,
+    the risk varies depending on which part of the country you visit. </p>
+     <p>2. <b>Bite prevention</b><br />
+       You should use an effective insect repellent on
+    clothing and any exposed skin. Diethyltoluamide (DEET)
+    is safe, the most effective insect repellent and can be
+    sprayed on to clothes. It lasts up to three hours for 20%,
+    up to six hours for 30% and up to 12 hours for 50% DEET.
+    There is no further increase in duration of protection beyond
+    a concentration of 50%. Because 50% DEET lasts longer, you
+    do not need to apply it so often.</p>
+    <p>3. <b>Chemoprophylaxis</b> <br />
+Antimalarial medication (chemoprophylaxis) helps to prevent malaria.
+    The best medication to take depends on the country you visit.
+    This is because the type of parasite varies between different parts
+    of the world. Also, in some areas the parasite has become resistant to certain medicines
+</p>
+
+     <p>4. <b>Diagnosis quickly</b> <br />
+Diagnosis should be made promptly and treatment started quickly.
+    Seek medical attention urgently if you become unwell after
+    travelling to a high-risk area.
+</p>
+
+</div>
+			</div>
+			<div class="col-lg-6">
+				<!-- Featured Member -->
+<div class="founder">
+<h1>Malaria Drugs to use</h1>
+    <p>1. Arteether</p>
+    <p>2. Artemether</p>
+    <p>3. Artesunate</p>
+    <p>4. Bulaquine</p>
+    <p>5. Chloroquine</p>
+	</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!--====  End of Feature Team  ====-->
+
+
+{%endblock %}

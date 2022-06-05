@@ -1,0 +1,72 @@
+{%extends 'base.html' %}
+{%load static %}
+
+{%block content1 %}
+<script>
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(400)
+                        .height(400);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+
+
+<section class="section page-title"  style="background-image:url({% static 'images/doctor-patient-catoon.jpg' %})">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 m-auto">
+				<!-- Page Title -->
+				<h2>Malaria Diagnostic System </h2>
+				<!-- Page Description -->
+				<h3>Malaria Predictor</h3>
+			</div>
+		</div>
+	</div>
+</section>
+        <!-- Page Header End -->
+        
+
+        <!-- Contact Start -->
+        <div class="contact">
+            <div class="container">
+                <div class="section-header text-center">
+                    <p>Malaria Predictor</p>
+                    <h2>Please upload the image of the cell</h2>
+                </div>
+                <div class="row align-items-center contact-information">
+                    <div class="col-md-6 col-lg-3">
+                    </div>
+
+                                   <div class="row contact-form">
+                        <div id="success"></div>
+                        <form method="post" enctype="multipart/form-data">
+                            {%csrf_token%}
+                            <div class="control-group">
+                                <input onchange="readURL(this);" type="file" name="image" placeholder="Upload Image" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group md-4">
+                                <img class="img-fluid" id="blah" src="#" alt="UPLOADED IMAGE WILL APPEAR HERE" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn btn-primary" type="submit" id="sendMessageButton">Upload/Predict</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <br /> <br />
+        </div>
+        <!-- Contact End -->
+
+{%endblock %}
